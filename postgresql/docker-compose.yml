@@ -1,0 +1,12 @@
+version: "2"
+services:
+  postgresql-db:
+    container_name: postgresql.db-local
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5432:5432
+    env_file:
+      - ./docker.env
+

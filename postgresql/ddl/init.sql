@@ -1,0 +1,7 @@
+-- use master
+-- CREATE DATABASE TESTDB;
+-- 
+-- use TESTDB;
+-- CREATE SHEMA TEST;
+-- 
+-- 
