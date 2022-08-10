@@ -10,5 +10,5 @@ WORKDIR /var/www/app
 
 EXPOSE 5432
 
-# CMD /docker-entrypoint-initdb.d/entrypoint.sh
+CMD /docker-entrypoint-initdb.d/entrypoint.sh
 
