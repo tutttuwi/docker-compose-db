@@ -14,9 +14,8 @@ drop table if exists  flyway_schema_history;
 -- drop schema if exists dev;
 
 -- CREATE DATABASE
-create schema dev;
-
-SET SCHEMA dev;
+--create schema dev;
+--SET SCHEMA dev;
 
 --------------------------------------------------------------------------------
 -- Table : account_connection

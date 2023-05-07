@@ -1,12 +1,19 @@
-version: "2"
+version: "3"
 services:
   postgresql-db:
+    image: postgres:10.5
     container_name: postgresql.db-local
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    #Dockerfile disabled
+    #build:
+    #  context: .
+    #  dockerfile: ./Dockerfile
     ports:
-      - 5433:5432 # postgresql-port:local-port
+      - 15432:5432 # postgresql-port:local-port
     env_file:
       - ./docker.env
+    #stdin_open: true
+    #tty: true
+    #command: tail -f /dev/null
 

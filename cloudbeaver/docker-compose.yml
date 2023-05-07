@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: cloudbeaver
+    ports:
+      - "18978:8978"
+    volumes:
+      - "./workspace:/opt/cloudbeaver/workspace"
+    #network_mode: "host"
+
