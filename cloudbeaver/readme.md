@@ -49,4 +49,20 @@ jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
 (略)
 ```
 
+### docker cp コマンドでローカルからコピーする方法
+
+SRC_FILE_PATH=./java.security
+CONTAINER_NAME=cloudbeaver
+DST_FILE_PATH=/opt/java/openjdk/conf/security/java.security
+
+docker cp ${CONTAINER_NAME}:${DST_FILE_PATH} ${SRC_FILE_PATH}
+
+# ファイル編集
+vim ${SRC_FILE_PATH}
+
+docker cp ${SRC_FILE_PATH} ${CONTAINER_NAME}:${DST_FILE_PATH}
+
+
+
+
 
